@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi Wishes</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #0ff700, #00f7ff, #0007ff, #8d00ff);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffeb00;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Holi Hai! 🎨🎉</h1>
+        <p>Apna naam enter karein aur Holi ki shubhkamnayen payein!</p>
+        <input type="text" id="nameInput" placeholder="Apna naam likhein...">
+        <button onclick="showMessage()">Wish Now</button>
+        <p class="message" id="message"></p>
+    </div>
+    
+    <script>
+        function showMessage() {
+            let name = document.getElementById('nameInput').value;
+            let messageBox = document.getElementById('message');
+            if (name.trim() !== "") {
+                messageBox.innerHTML = `🎊 Happy Holi, ${name}! 🎨
+                <br> Aapke jeevan mein sukh, shanti aur rang barse! 🌈`;
+            } else {
+                messageBox.innerHTML = "Kripya apna naam enter karein!";
+            }
+        }
+    </script>
+</body>
+</html>
